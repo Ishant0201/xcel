@@ -1,0 +1,5 @@
+<div class="drop-area" (drop)="handleDrop($event)" (dragover)="highlight($event)" (dragleave)="unhighlight($event)">
+    <p class="drop-text">Drag & Drop files here</p>
+    <input type="file" id="file-input" (change)="handleFileInput($event)" multiple>
+    <label for="file-input" class="browse-btn">Browse</label>
+</div>

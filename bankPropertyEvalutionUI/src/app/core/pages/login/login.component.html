@@ -1,0 +1,28 @@
+<!-- login.component.html -->
+
+<div class="container-login d-flex justify-content-center">
+    <form (ngSubmit)="login()">
+        <div class="row py-3">
+            <div class="col">
+                <label for="username">Username&nbsp;</label>
+                <input type="text" id="username" [(ngModel)]="username" name="username" required>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col">
+                <label for="password">Password&nbsp;</label>
+                <input type="password" id="password" [(ngModel)]="password" name="password" required>
+            </div>
+        </div>
+        <div class="row py-2">
+            <div class="col">
+                <button type="submit">Login</button>
+            </div>
+        </div>
+        <br>
+
+    </form>
+    @if(error) {
+    <p class="error">{{ error }}</p>
+    }
+</div>
