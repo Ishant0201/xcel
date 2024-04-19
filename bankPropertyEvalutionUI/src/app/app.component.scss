@@ -1,0 +1,11 @@
+.bgMain {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure the page takes up at least the viewport height */
+}
+
+.main-content {
+    flex-grow: 1;
+    /* Allow the main content to grow and push the footer to the bottom */
+}
