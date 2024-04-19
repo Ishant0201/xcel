@@ -28,7 +28,7 @@ public class PropertyEvaluationController {
             log.info("Controller >> addPropertyEvaluation initiatorBusinessUnit:{}", initatorBusinessUnit);
             AddPropertyEvaluationResponse response = propertyEvaluationService.addPropertyEvaluation(propertyEvaluationRequest, initatorBusinessUnit);
             if (response != null && response.getRefrenceNo() != null && !response.getRefrenceNo().isEmpty()) {
-                return ResponseEntity.ok(response);
+                return ResponseEntity.status(HttpStatus.CREATED).body(response);
             } else {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new AddPropertyEvaluationResponse());
             }
