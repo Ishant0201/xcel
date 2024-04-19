@@ -1,7 +1,7 @@
 <!-- login.component.html -->
 
-<div class="container-login d-flex justify-content-center">
-    <form (ngSubmit)="login()">
+<div class="container-login d-flex flex-column align-items-center">
+    <form (ngSubmit)="login()" class="text-center">
         <div class="row py-3">
             <div class="col">
                 <label for="username">Username&nbsp;</label>
@@ -19,10 +19,10 @@
                 <button type="submit">Login</button>
             </div>
         </div>
-        <br>
-
     </form>
-    @if(error) {
-    <p class="error">{{ error }}</p>
-    }
-</div>
+    <div class="row py-2">
+        <div class="col">
+            <p class="error" *ngIf="error">{{ error }}</p>
+        </div>
+    </div>
+    </div>
